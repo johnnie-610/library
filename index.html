@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <header>
+        <h1>Library</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">Authors</a></li>
+                <li><a href="#">Genres</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+        </nav>
+    </header>
+    <main>
+        <section class="search">
+            <h2>Search for a Book</h2>
+            <div class="search-input">
+                <input type="text" id="search-input" placeholder="Enter book title or author">
+                <button id="search-button">Search</button>
+            </div>
+            <div class="search-results">
+                <h2 id="search-results-header"></h2>
+                <div id="search-results-container"></div>
+            </div>
+        </section>
+
+        <section class="book-details">
+            <h2>Book Details</h2>
+            <div id="book-details-container">
+                <dialog id="book-dialog">
+                    <form>
+                        <!-- title, author, year, pages, publisher, size, format, language, description -->
+                         <div class="details">
+                            <div>
+                                <label for="book-title">Title:</label>
+                                <input type="text" id="book-title" required>
+                            </div>
+                            <div>
+                                <label for="book-author">Author:</label>
+                                <input type="text" id="book-author" required>
+                            </div>
+                            <div>
+                                <label for="book-year">Year:</label>
+                                <input type="number" id="book-year" required>
+                            </div>
+                            <div><label for="book-pages">Pages:</label>
+                            <input type="number" id="book-pages" required></div>
+                            <div><label for="book-publisher">Publisher:</label>
+                            <input type="text" id="book-publisher" required></div>
+                            <div>
+                                <label for="book-size">Size:</label>
+                                <input type="text" id="book-size" required>
+                            </div>
+                            <div><label for="book-format">Format:</label>
+                            <input type="text" id="book-format" required></div>
+                            <div>
+                                <label for="book-language">Language:</label>
+                                <input type="text" id="book-language" required>
+                            </div>
+                            <div><label for="book-description">Description:</label>
+                            <textarea id="book-description" placeholder="Enter description. Max 250 character" maxlength="250" required></textarea></div>
+                         </div>
+                        <div class="form-buttons">
+                            <button type="submit" id="save">Save</button>
+                            <button type="button" id="cancel">Cancel</button>
+                        </div>
+                        
+                    </form>
+                </dialog>
+                <button id="add-book">Add book</button>
+                <output id="output"></output>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Library. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="#">Facebook</a>,
+            <a href="#">Twitter</a>,
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>
